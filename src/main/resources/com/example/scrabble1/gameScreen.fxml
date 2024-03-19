@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scrabble1.GameScreen">
+   <children>
+      <VBox fx:id="gameVBox">
+         <children>
+            <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="750.0" style="-fx-background-color: NAVAJOWHITE;" stylesheets="@style.css" />
+            <AnchorPane prefHeight="46.0" prefWidth="750.0" style="-fx-background-color: NAVAJOWHITE;">
+               <children>
+                  <Button layoutX="106.0" layoutY="-10.0" mnemonicParsing="false" onAction="#onPlay" prefHeight="42.0" prefWidth="75.0" style="-fx-background-color: ANTIQUEWHITE; -fx-border-color: BLACK; -fx-border-width: 2;" text="Play" />
+                  <Button layoutX="577.0" layoutY="-10.0" mnemonicParsing="false" onAction="#onReset" prefHeight="43.0" prefWidth="77.0" style="-fx-background-color: ANTIQUEWHITE; -fx-border-color: BLACK; -fx-border-width: 2;" text="Reset" />
+                  <Button layoutX="661.0" layoutY="-10.0" mnemonicParsing="false" onAction="#onQuit" prefHeight="43.0" prefWidth="77.0" style="-fx-background-color: ANTIQUEWHITE; -fx-border-color: BLACK; -fx-border-width: 2;" text="Quit" />
+                  <ImageView fx:id="refresh" fitHeight="40.0" fitWidth="41.0" layoutX="355.0" layoutY="2.0" onMouseClicked="#onRefresh" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@refresh-icon-27.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="22.0" layoutY="-11.0" mnemonicParsing="false" onAction="#onSkip" prefHeight="42.0" prefWidth="75.0" style="-fx-background-color: ANTIQUEWHITE; -fx-border-color: BLACK; -fx-border-width: 2;" text="Skip" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: NAVAJOWHITE;">
+         <children>
+            <TextArea fx:id="humanHistoryViewer" layoutY="57.0" prefHeight="145.0" prefWidth="200.0" styleClass="text-field" stylesheets="@style.css" text="Your History:" wrapText="true" />
+            <Label fx:id="pointsViewer" layoutX="14.0" layoutY="727.0" text="Your Points:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="compPointsViewer" layoutX="11.0" layoutY="764.0" text="Computer's Points:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="bagViewer" layoutX="-1.0" layoutY="391.0" prefHeight="200.0" prefWidth="201.0" styleClass="text-field" stylesheets="@style.css" text="Bag:" wrapText="true" />
+            <TextArea fx:id="computerHistoryViewer" layoutY="209.0" prefHeight="145.0" prefWidth="200.0" styleClass="text-field" stylesheets="@style.css" text="Computer History:" wrapText="true" />
+            <TextField fx:id="searchPrompt" layoutX="20.0" layoutY="636.0" />
+            <Label layoutX="18.0" layoutY="598.0" prefHeight="40.0" prefWidth="180.0" text="Unsure if a word is in the scrabble Dictionary? Check here for 2 points" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="checkLink" layoutX="70.0" layoutY="667.0" onAction="#onLink" text="Check" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

@@ -1,0 +1,13 @@
+.text-field
+{
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-control-inner-background: NAVAJOWHITE;
+    -fx-background-color: NAVAJOWHITE;
+    -fx-text-fill: BLACK;
+}
+
+.root
+{
+    -fx-background-color: NAVAJOWHITE;
+}
